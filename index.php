@@ -32,11 +32,9 @@
                         print_r ($_REQUEST); 
                         $result = preg_split("/[\s\;]+/", $_REQUEST["set"]);
                         print_r ($result);
-                        include_once ("lib/mathpublisher.php");
+                        include_once ("lib/phpmathpublisher_php5/mathpublisher.php");
+                        echo mathfilter("<m>a = a + 1</m>", 24, "img/");
                     ?></pre>
-                    <?
-                        echo mathfilter("<m>a = a + 1</m>", 24, "../img/");
-                    ?>
                 </div>
             </div>
             <? } ?>
