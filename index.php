@@ -17,9 +17,9 @@
             </div>
             <div class="row">
                 <div class="span12">
-                    <form class="well form-inline">
+                    <form class="well form-inline" method="post">
                         <input type="text" name="set" class="span10" placeholder="Input sequence here...">
-                        <button type="submit" class="btn btn-primary pull-right"><i class="icon-search"></i> Submit</button>
+                        <button type="submit" class="btn btn-primary pull-right"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Submit</button>
                         <p class="example"><i>For example:</i> 1 2 3 4 5</p>
                     </form>
                 </div>
@@ -28,12 +28,9 @@
             <? if (isset($_REQUEST['set'])) { ?>
             <div class="row">
                 <div class="span12">
-                    <pre><?  
-                        print_r ($_REQUEST); 
-                        $result = preg_split("/[\s\;]+/", $_REQUEST["set"]);
-                        print_r ($result);
+                    <pre class="alert alert-success"><?  
                         include_once ("lib/phpmathpublisher_php5/mathpublisher.php");
-                        echo mathfilter("<m>a = a + 1</m>", 24, "img/");
+                        include_once ("lib/search.php");
                     ?></pre>
                 </div>
             </div>
